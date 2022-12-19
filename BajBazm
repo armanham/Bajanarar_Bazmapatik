@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int   bazm(int n1, int n2, int x)
+{
+    int a, b;
+    
+    a = n1 / x;
+    b = n2 / x;
+    
+    return (a * b) * x;
+}
+
+
+int main(void)
+{    
+    int num1, num2;
+
+    cout << "Enter an integer1 ";
+    cin >> num1;
+    cout << "Enter an integer2 ";
+    cin >> num2;
+    
+    int i;
+    if (num1 > num2)
+        i = num2;
+    else
+        i = num1;
+    while (i > 0)
+    {
+        if (num1 % i == 0 && num2 % i == 0)
+        {
+            cout << "greatest common divisor in " << i;
+            break;
+        }
+        i--;
+    }
+    
+    cout << "\ngreatest common bazmapatik in " << bazm(num1, num2, i);
+   
+    return (0);
+}
